@@ -1,0 +1,89 @@
+<div class="task2-wrapper">
+    <section class="section-wapper">
+        <div class="left">
+            <img class="logo" src="../../../assets/logo.png" alt="">
+            <h1>Lorem ipsum dolor sit amet</h1>
+            <h3>consectetur adipisicing elit. Sint impedit, non temporibus quae odit iusto cumque nostrum expedita suscipit, rerum officiis. Adipisci error hic excepturi unde iste labore ad veritatis.</h3>
+        </div>
+        <div class="right">
+            <app-section-title [config]="{text: 'News & blog', style: 'font-size: 25px'}"></app-section-title>
+            <div class="content">
+                <div class="item">
+                    <app-link-button [config]="{text: 'KiwiSaver HomeStart grant explained', type: 'plain'}"></app-link-button>
+                </div>
+                <div class="item">
+                    <app-link-button [config]="{text: 'What\'s happening in the property market?', type: 'plain'}"></app-link-button>
+                </div>
+                <div class="item">
+                    <app-link-button [config]="{text: 'Trust the reform', type: 'plain'}"></app-link-button>
+                </div>
+                <div class="item">
+                    <app-link-button [config]="{text: 'Tax update - simplification of taxes, foreign ...', type: 'plain'}"></app-link-button>
+                </div>
+                <div class="item">
+                    <app-link-button [config]="{text: 'What do the lending rules mean?', type: 'plain'}"></app-link-button>
+                </div>
+                <div class="item">
+                    <app-link-button [config]="{text: 'How will the Reserve Back repond to ...', type: 'plain'}"></app-link-button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <app-nav-bar></app-nav-bar>
+    <section class="section-wapper section-wapper__media">
+        <div class="left">
+            <!-- <img src="../../../assets/video-img.png" alt=""> -->
+            <iframe width="auto" height="auto" src="https://www.youtube.com/embed/K4TOrB7at0Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="right">
+            <div class="content">
+                <h3>Why have a financial adviser?</h3>
+                <p>
+                    Have was created out of the need to simply do things
+                    better. With specialist advisers across a range of financial
+                    services, we will offer you the best, practical advice for
+                    your unique situation.
+                </p>
+                <p>
+                    Our financial advisers span the north and south island makeing
+                    us conveniently positioned wherever you need us.
+                </p>
+            </div>
+            <app-link-button [config]="{text: 'Lear more about our advisers', type: 'bordered'}"></app-link-button>
+        </div>
+    </section>
+    <section class="section-wapper section-wapper__contact-us">
+        <div class="left">
+            <div class="top-title">
+                <h3>Contact us today</h3>
+                <p>Brief intro paragraph about this section. Bis perepelent quam
+                nam ut raeptam facillo riberum sitatur aut proreperiata volorer.</p>
+            </div>
+            <app-contact-us-form (onSubmitData)="getData($event)"></app-contact-us-form>
+        </div>
+        <div class="right">
+            <app-section-title [config]="{text: 'Contact us', style: 'font-size: 16px'}"></app-section-title>
+            <div class="content">
+                <div class="item">
+                    <app-link-button [config]="{text: 'Find an adviser', type: 'icon', iconName: 'place', notClickable: true}"></app-link-button>
+                </div>
+                <div class="item">
+                    <app-link-button [config]="{text: 'Talk to an accountant', type: 'icon', iconName: 'forum', notClickable: true}"></app-link-button>
+                </div>
+                <div class="item">
+                    <app-link-button [config]="{text: 'Talk to a mortgage broker', type: 'icon', iconName: 'home', notClickable: true}"></app-link-button>
+                </div>
+                <div class="item">
+                    <app-link-button [config]="{text: '0800 700 699', type: 'icon', iconName: 'phone', notClickable: true}"></app-link-button>
+                </div>
+                <div class="item">
+                    <app-link-button [config]="{text: 'reception@havenadvisers.com.nz', type: 'icon', iconName: 'mail', notClickable: true}"></app-link-button>
+                </div>
+                <div class="item">
+                    <app-link-button [config]="{text: 'Be a part of our Facebook community', type: 'icon', imgSrc: './assets/facebook.png', notClickable: true}"></app-link-button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <app-footer></app-footer>
+</div>

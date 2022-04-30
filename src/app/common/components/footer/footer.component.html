@@ -1,0 +1,38 @@
+<footer class="footer">
+    <section class="footer__newsletter-signup">
+        <h4>SIGN UP TO OUR NEWSLETTER</h4>
+        <form [formGroup]="newsletterForm" #ngForm="ngForm">
+            <div class="form-field-group">
+                <div class="form-field-container">
+                    <input formControlName="fullName"  required type="text"  placeholder="Full name*"
+                    [class.invalid]="newsletterForm.get('fullName')?.invalid && ngForm.submitted">
+                </div>
+                <div class="form-field-container">
+                    <input formControlName="emailAddress" required type="email" placeholder="Email address*"
+                    [class.invalid]="newsletterForm.get('emailAddress')?.invalid && ngForm.submitted">
+                </div>
+                <div class="form-field-container form-field-container__submit">
+                    <button type="submit" class="secondary">Submit</button>
+                </div>
+            </div>
+        </form>
+    </section>
+    <section class="footer__navigation">
+        <img src="../../../assets/logo.png" alt="haven">
+        <ul>
+            <li><a href="">HOME</a></li>
+            <li><a href="">OUR SERVICES</a></li>
+            <li><a href="">ABOUT US</a></li>
+            <li><a href="">TESTIMONIALS</a></li>
+            <li><a href="">BLOG</a></li>
+            <li><a href="">CONTACT US</a></li>
+        </ul>
+        <div class="contacts">
+            <span>0800 700 699</span> <br>
+            <span>reception@havenadvisers.co.nz</span>
+        </div>
+    </section>
+    <section class="footer__copyright">
+        <p>Copyright © 2017 Haven Advisers Limited. All rights reserved.</p>
+    </section>
+</footer>

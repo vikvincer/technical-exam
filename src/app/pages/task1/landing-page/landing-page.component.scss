@@ -1,0 +1,20 @@
+.landing-page-wrapper {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        div {
+            padding: 10px 0;
+        }
+        .label {
+            flex: 30%; 
+            font-weight: 400;
+        }
+        .item {
+            flex: 70%; 
+            font-weight: 100;
+        }
+    }
+}

@@ -1,0 +1,8 @@
+@import '../../styles/mixin';
+.task1-wrapper {
+    padding: 20px;
+    >div {
+        padding: 20px;
+        background: $background-secondary;
+    }
+}

@@ -1,0 +1,48 @@
+<div class="contact-us-form-wrapper">
+    <form [formGroup]="contactUsForm" #ngForm="ngForm" (ngSubmit)="onSubmit()">
+        <div class="form-field-group">
+            <div class="form-field-container">
+                <input formControlName="fullName"  required type="text"  placeholder="Full name*"
+                [class.invalid]="contactUsForm.get('fullName')?.invalid && ngForm.submitted">
+            </div>
+            <div class="form-field-container">
+                <input formControlName="emailAddress" required type="email" placeholder="Email address*"
+                [class.invalid]="contactUsForm.get('emailAddress')?.invalid && ngForm.submitted">
+            </div>
+            <div class="form-field-container">
+                <input formControlName="phoneNumber" type="number" placeholder="Contact number">
+            </div>
+        </div>
+        <div class="form-field-group">
+            <div class="form-field-container">
+                <select formControlName="bookingStatus">
+                    <option value="" disabled selected hidden>Book a meeting</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <div class="form-field-container has-caret" [class.has-caret]="showBookDateCaret">
+                <input formControlName="bookingDate" #bookDate type="text" placeholder="Preferred day*"
+                [class.invalid]="contactUsForm.get('bookingDate')?.invalid && ngForm.submitted">
+            </div>
+            <div class="form-field-container" [class.has-caret]="showBookTimeCaret">
+                <input formControlName="bookingTime" #bookTime type="text" placeholder="Preferred time*"
+                [class.invalid]="contactUsForm.get('bookingTime')?.invalid && ngForm.submitted">
+            </div>
+        </div>
+        <div class="form-field-group">
+            <div class="form-field-container">
+                <textarea formControlName="message" name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
+            </div>
+        </div>
+
+        <div class="form-field-group controls">
+            <div class="form-field-container">
+                <button type="reset" class="primary">Reset</button> 
+                <button type="submit" class="primary">Submit</button>
+            </div>
+        </div>
+
+    </form>
+</div>
+

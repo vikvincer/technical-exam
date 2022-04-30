@@ -1,0 +1,28 @@
+<nav class="nav-bar">
+    <a (click)="toggle()" href="javascript:void(0)" class="hamburger-toggle" [class.active]="isToggleActive">
+        <span></span>
+    </a>
+    <ul [class.show-ul] = "isToggleActive">
+        <li>
+            <a href="#" title="Book keeping & payroll">Book keeping & payroll</a>
+        </li>
+        <li>
+            <a href="#" title="Financial & GST">Financial & GST</a>
+        </li>
+        <li class="active">
+            <a href="#" title="KiwiSaver advice">KiwiSaver advice</a>
+        </li>
+        <li>
+            <a href="#"  title="Insuring people">Insuring people</a>
+        </li>
+        <li>
+            <a href="#" title="Tax & business advice">Tax & business advice</a>
+        </li>
+        <li>
+            <a href="#" title="Trustee services">Trustee services</a>
+        </li>
+        <li>
+            <a href="#" title="Mortgage advice">Mortgage advice</a>
+        </li>
+    </ul>
+</nav>

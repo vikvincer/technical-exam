@@ -1,0 +1,108 @@
+@import '../../../styles/global-styles.scss';
+.footer {
+    background: $color-dark;
+    padding: 20px 20px 0 20px;
+    color: $color-gray;
+    @at-root {
+        &__newsletter-signup {
+            display: flex;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding-bottom: 20px;
+            h4 {
+                margin: 0 15px 0 0;
+                font-size: 16px;
+                line-height: 40px;
+                text-align: center;
+            }
+            form {
+                .form-field-group {
+                    display: flex;
+                    flex-wrap: wrap;
+                    .form-field-container {
+                        margin-right: 10px;
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+        &__navigation {
+           border-top: #949899 1px solid;
+           padding: 25px 0;
+           text-align: center;
+           ul {
+                display: flex;
+                padding-left: 0;
+                flex-wrap: wrap;
+                -webkit-justify-content: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                flex: 100%;
+               li {
+                   list-style: none;
+                   margin: 15px;
+                   &:first-child {
+                       margin-left: 0;
+                   }
+                   &:last-child {
+                       margin-right: 0;
+                   }
+               }
+               a {
+                   text-decoration: none;
+                   color: inherit;
+                   font-size: 10px;
+               }
+           }
+           .contacts {
+              span {
+                  font-size: 12px;
+                  display: inline-block;
+                  line-height: 1.6;
+              }
+           }
+        }
+        &__copyright {
+            border-top: #3b3b3b 1px solid;
+            text-align: right;
+            padding: 10px 0 15px 0;
+            p {
+                margin: 0;
+                font-size: 14px;
+            }
+        }
+        
+    }
+}
+
+
+@media only screen and (max-width: 640px) {
+    .footer {
+        @at-root {
+            &__newsletter-signup {
+                form {
+                    .form-field-group {
+                        .form-field-container {
+                            padding-bottom: 20px;
+                            flex: 100%;
+                            margin-right: 0;
+                            input, button {
+                                width: 100%;
+                            }
+                            &:last-child {
+                                padding-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+            &__copyright {
+                text-align: center;
+            }       
+        }
+    }
+}

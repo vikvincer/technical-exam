@@ -1,0 +1,71 @@
+@import "../../../styles/mixin";
+.contact-us-form-wrapper {
+  @include bgSecondary;
+  form {
+      display: block;
+    .form-field-group {
+        display: flex;
+        padding-bottom: 10px;
+        &.controls {
+            text-align: right;
+            button {
+                margin: 0 5px;
+            }
+        }
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+    .form-field-container {
+        flex: 1;
+        &:nth-child(2) {
+            margin: 0 20px;
+        }
+        &.has-caret {
+            position: relative;
+            &::after {
+                pointer-events: none;
+                position: absolute;
+                height: 100%;
+                width: 50px;
+                content: " ";
+                right: 0;
+                top: 0;
+                z-index: 99;
+                background-image: linear-gradient(45deg, transparent 50%,  $color-white 50%), linear-gradient(135deg,  $color-white 50%, transparent 50%);
+                background-position: calc(100% - 20px) calc(1em + 1px), calc(100% - 15px) calc(1em + 1px), calc(100% - 2.5em) 0.5em;
+                background-size: 7px 7px, 7px 7px, 1px 1.5em;
+                background-repeat: no-repeat;
+            }
+            &.hide {
+                display: none;
+            }
+        }
+
+    }
+    input, select, textarea {
+        display: inline-block;
+        width: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 640px) {
+    .contact-us-form-wrapper {
+        @include bgSecondary;
+        form {
+ 
+          .form-field-group {
+            flex-wrap: wrap;
+          }
+          .form-field-container {
+              margin: 10px 0;
+              flex: 100%;
+              &:nth-child(2) {
+                margin: 10px 0;
+            }
+      
+          }
+        }
+      }
+}

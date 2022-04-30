@@ -1,0 +1,186 @@
+@import '../../styles/mixin';
+
+.task2-wrapper {
+    .section-wapper {
+        display: flex;
+        flex-wrap: wrap;
+        .left {
+            flex: percentage(620/1280);
+            @include bgSecondary;
+            padding: 20px 25px 100px 40px;
+            color: $color-white;
+            h1 {
+                font-size: 76px;
+                margin-top: 100px;
+                margin-bottom: 30px;
+                font-weight: 500;
+            }
+            h3 {
+                margin: 0;
+                line-height: 1.5;
+                font-weight: normal;
+                font-size: 32px;
+            }
+        }
+        .right {
+            padding: 100px 60px;
+            flex: percentage((1280 - 620) /1280);
+            .content {
+                padding-top: 40px;
+                .item {
+                    padding: 5px 0;
+                }
+            }
+        }
+        @at-root {
+            &__media {
+                .left {
+                    flex: percentage(970/1280);
+                    padding: 0;
+                    background: transparent;
+                    text-align: center;
+                    overflow: hidden;
+                   img, video {
+                       width: auto;
+                       height: 100%;
+                   }
+                   iframe {
+                       width: 100%;
+                       height: 100%;
+                       min-height: 450px;
+                   }
+                }
+                .right {
+                    flex: percentage((1280 - 970) /1280);
+                    padding: 40px 20px 40px 40px;
+                    @include bgSecondary;
+                    color: $color-gray;
+                    .content {
+                        padding-top: 0;
+                        margin-bottom: 40px;
+                        h3 {
+                            font-size: 22px;
+                            font-weight: lighter;
+                        }
+                        p {
+                            line-height: 1.5;
+                            font-size: 16px;
+                            font-weight: lighter;
+                        }
+                    }
+                }
+            }
+            &__contact-us {
+                .left {
+                    flex: percentage(830/1280);
+                    color: $color-white;
+                    padding: 50px 50px 30px 150px;
+                    .top-title {
+                        width: 430px;
+                        margin: 0 auto 35px auto;
+                        text-align: center;
+                        h3 {
+                            font-size: 22px;
+                            font-weight: 100;
+                        }
+                        p {
+                            font-size: 14px;
+                            line-height: 1.6;
+                        }
+                    }
+                }
+                .right {
+                    flex: percentage((1280 - 830) / 1280);
+
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1080px) {
+    .task2-wrapper {
+        .section-wapper {
+            .left {
+                h1 {
+                    font-size: 40px;
+                    margin-top: 55px;
+                }
+                h3 {
+                    font-size: 24px;
+                }
+            }
+
+            @at-root {
+                &__media {
+                    .left {
+                        flex: 100%;
+                        padding: 0;
+                        margin: 0;
+                        height: auto;
+                        img, video, iframe {
+                            width: 100%;
+                            height: auto;
+                            margin-bottom: -4px;
+                        }
+                        iframe {
+                            min-height: 450px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .task2-wrapper {
+        .section-wapper {
+            .left, .right {
+                padding: 20px;
+                flex: 100%;
+                .logo {
+                    width: 132px;
+                    height: auto;
+                    margin: 0 auto;
+                    display: block;
+                }
+            }
+            @at-root {
+                &__media {
+                    .left {
+                        padding: 0;
+                    }
+                }
+        
+            }
+        }
+    }
+}
+@media only screen and (max-width: 640px) {
+    .task2-wrapper {
+        .section-wapper {
+            .left {
+                h1 {
+                    margin-top: 40px !important;
+                    margin-bottom: 20px;
+                    font-size: 32px;
+                }
+            }
+            @at-root {
+                &__contact-us {
+                    .left {
+                        .top-title {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+ 

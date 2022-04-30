@@ -1,0 +1,78 @@
+@import "./mixin";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    @include bgPrimary;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input, textarea, select {
+    @include border($color-white, 1px, solid);
+    padding: 10px;
+    font-size: 16px;
+    background: transparent;
+    color: $color-white;
+    outline: none;
+    &::placeholder {
+        color: $color-white;
+        font-weight: 50;
+    }
+    &.invalid {
+        color: $color-red;
+        &::placeholder {
+            color: $color-red;
+            font-weight: 50;
+        }
+    }
+}
+
+input[type="date"], input[type="time"] {
+    height: 40.5px;
+    position: relative;
+
+}
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    background-image: linear-gradient(45deg, transparent 50%,  $color-white 50%), linear-gradient(135deg,  $color-white 50%, transparent 50%);
+    background-position: calc(100% - 20px) calc(1em + 1px), calc(100% - 15px) calc(1em + 1px), calc(100% - 2.5em) 0.5em;
+    background-size: 7px 7px, 7px 7px, 1px 1.5em;
+    background-repeat: no-repeat;
+    option {
+        background: $background-primary;
+        color: #000;
+        text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+    }
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    @include transition;
+    &.primary {
+        @include bgTertiary;
+        color: $color-blue;
+        border: none;
+        border-style: none;
+
+    }
+    &.secondary {
+        @include bgSecondary;
+        color: $color-white;
+        border: none;
+    }
+    &:hover {
+        opacity: .9;
+    }
+}
+
+
+

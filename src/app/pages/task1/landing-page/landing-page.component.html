@@ -1,0 +1,32 @@
+<div class="landing-page-wrapper">
+    <h1>Take you for booking!</h1>
+    <div *ngIf="(contactData$ | async) as contact">
+        <div class="container">
+
+   
+            <div class="label">Fullname</div>
+            <div class="item">{{contact?.fullName}}</div>
+            
+            <div class="label">Email</div>
+            <div class="item">{{contact?.emailAddress}}</div>
+
+            <div class="label">Phone number</div>
+            <div class="item">{{contact?.phoneNumber || '-'}}</div>
+
+            <div class="label">Booking status</div>
+            <div class="item">{{contact?.bookingStatus || '-'}}</div>
+
+            <div class="label">Date</div>
+            <div class="item">{{contact?.bookingDate}}</div>
+
+            <div class="label">Time</div>
+            <div class="item">{{contact?.bookingTime}}</div>
+
+            <div class="label">Message</div>
+            <div class="item">{{contact?.message  || '-'}}</div>
+
+        </div>
+
+    </div>
+    
+</div>

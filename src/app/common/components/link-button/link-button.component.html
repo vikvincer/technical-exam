@@ -1,0 +1,13 @@
+<a class="link-button" href="javascript:void(0);" 
+[class.not-clickable]="config?.notClickable"
+[ngClass]="{
+    'link-button__plain': config?.type === 'plain',
+    'link-button__bordered': config?.type === 'bordered',
+    'link-button__icon':  config?.type === 'icon'
+}">
+    {{config?.text}}
+    <ng-container *ngIf="config?.type === 'icon'">
+        <mat-icon *ngIf="config?.iconName">{{config?.iconName}}</mat-icon>
+        <img [src]="config?.imgSrc" alt="" *ngIf="config?.imgSrc">
+    </ng-container>
+</a>

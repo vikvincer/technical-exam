@@ -1,0 +1,21 @@
+@import './variables';
+
+@mixin bgPrimary {
+    background: $background-primary;
+}
+
+@mixin bgSecondary {
+    background: $background-secondary;
+}
+
+@mixin bgTertiary {
+    background: $baground-tertiary;
+}
+
+@mixin border ($color, $width, $type) {
+    border: $color $width $type;
+}
+
+@mixin transition ($tag: all, $type: ease-in-out, $time: .2s){
+    transition: $tag $type $time;
+}
